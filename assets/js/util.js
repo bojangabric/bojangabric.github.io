@@ -584,49 +584,4 @@
 
 	};
 
-
-	// Cache selectors
-	var lastId,
-		links = $(".links"),
-		linkHeight = links.outerHeight() + 15,
-		// All list items
-		linkItems = links.find("a").not('a#cv'),
-		// Anchors corresponding to menu items
-		scrollItems = linkItems.map(function () {
-			var item = $($(this).attr("href"));
-			if (item.length) { return item; }
-		});
-
-	linkItems.click(function (e) {
-		var href = $(this).attr("href"),
-			offsetTop = href === "#" ? 0 : $(href).offset().top - linkHeight + 1;
-		$('html, body').stop().animate({
-			scrollTop: offsetTop
-		}, 800);
-		e.preventDefault();
-	});
-
-	// Bind to scroll
-	$(window).scroll(function () {
-		// Get container scroll position
-		var fromTop = $(this).scrollTop() + linkHeight;
-
-		// Get id of current scroll item
-		var cur = scrollItems.map(function () {
-			if ($(this).offset().top < fromTop)
-				return this;
-		});
-		// Get the id of the current element
-		cur = cur[cur.length - 1];
-		var id = cur && cur.length ? cur[0].id : "";
-
-		if (lastId !== id) {
-			lastId = id;
-			// Set/remove active class
-			linkItems
-				.parent().removeClass("active")
-				.end().filter("[href='#" + id + "']").parent().addClass("active");
-		}
-	});
-
 })(jQuery);
