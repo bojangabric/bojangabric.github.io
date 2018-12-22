@@ -2485,21 +2485,34 @@ input, select, textarea {
 		z-index:9;
 	}
 
+
+	@media screen and (max-width: 320px) {
+		.slideshow {
+			height: 10000px !important;
+		}
+	}
+
+	@media screen and (max-width: 360px) and (max-height: 640px) {
+		.slideshow {
+			height: 170px !important;
+		}
+	}
+
 	@media screen and (max-width: 980px) {
 		.slideshow {
 			height: 150px;
 		}
 	}
 
-	@media only screen and (max-width: 1024px) {
+	@media screen and (max-width: 1024px) {
 		.slideshow {
-			height: 2111100px;
+			height: 200px !important;
 		}
 	}
 
 	@media screen and (max-width: 1440px) {
 		.slideshow {
-			height: 260px;
+			height: 220px;
 		}
 	}
 	
