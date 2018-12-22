@@ -13,7 +13,7 @@ function getTime() {
 window.onload = () => {
   let xhr = new XMLHttpRequest();
   // Request to open weather map for Belgrade, Serbia
-  xhr.open('GET', 'http://api.openweathermap.org/data/2.5/weather?id=792680&units=metric&appid=2167c4200e7e10943e498f3ad426df20');
+  xhr.open('GET', 'https://api.openweathermap.org/data/2.5/weather?id=792680&units=metric&appid=2167c4200e7e10943e498f3ad426df20');
   xhr.onload = () => {
     if (xhr.readyState === 4) {
       if (xhr.status === 200) {
