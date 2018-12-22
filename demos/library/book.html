@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/shop-homepage.css" rel="stylesheet">
+  <link href="css/font-awesome/css/font-awesome.css" rel="stylesheet">
+
+  <title>Ready Player One - Library</title>
+  <link rel="shortcut icon" href="/images/favicon.png">
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <img src="images/favicon.png" class="header-icon">
+      <a class="navbar-brand ml-5 header-library" href="index.html">Library</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li>
+            <form class="my-2 my-lg-0 mr-lg-2" method="GET" action="/store/categories/1">
+              <div class="input-group">
+                <input class="form-control" type="text" name="keyword" placeholder="Search for a book...">
+                <span class="input-group-append">
+                  <button class="btn btn-primary" type="submit">
+                    <i class="fa fa-search"></i>
+                  </button>
+                </span>
+              </div>
+            </form>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="store.html">Shop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="login.html">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="register.html">Register</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+
+  <div class="container">
+
+    <div class="row">
+
+      <div class="col-lg-3">
+        <h1 class="my-4 ml-5"></h1>
+        <div class="list-group ml-5" style="top:80px">
+          <a href='#' class='list-group-item active'>All</a>
+          <a href='#' class='list-group-item'>Arts & Music</a>
+          <a href='#' class='list-group-item'>Biographies</a>
+          <a href='#' class='list-group-item'>Comics</a>
+          <a href='#' class='list-group-item'>Computer & Tech</a>
+          <a href='#' class='list-group-item'>Cooking</a>
+          <a href='#' class='list-group-item'>History</a>
+          <a href='#' class='list-group-item'>Horror</a>
+          <a href='#' class='list-group-item'>Mystery</a>
+          <a href='#' class='list-group-item'>Romance</a>
+          <a href='#' class='list-group-item'>Sci-Fi & Fantasy</a>
+          <a href='#' class='list-group-item'>Sports</a>
+        </div>
+      </div>
+      <div class="col-lg-9">
+        <div class="mt-4">
+
+          <img class="card-img-top bookpic" src="images/ready_player_one.jpg" alt="">
+          <div class="card-body">
+            <h3 class="card-title book" id="bookName"><strong>Ready Player One</strong></h3>
+            <bold class="author-name">Ernest Cline</bold><br>
+            <span class="card-rating">★★★★☆</span>
+          </div>
+
+          <h4>$16.00</h4>
+          <div class="btn-group mt-4">
+            <button type="button" class="btn btn-primary">Buy</button>
+            <button class="btn btn-primary btn-cart">Add to cart</button> </div>
+          <p class="card-text"><br>Ready Player One is a 2011 science fiction novel, and the debut novel of American
+            author Ernest Cline. The story, set in a dystopia in 2044, follows protagonist Wade Watts on his search for
+            an Easter egg in a worldwide virtual reality game, the discovery of which will lead him to inherit the game
+            creator's fortune. Cline sold the rights to publish the novel in June 2010, in a bidding war to the Crown
+            Publishing Group (a division of Random House). The book was published on August 16, 2011. An
+            audiobook was released the same day; it was narrated by Wil Wheaton, who was mentioned briefly in one of
+            the chapters. In 2012, the book received an Alex Award from the Young Adult Library Services
+            Association division of the American Library Association and won the 2012 Prometheus Award. <br>
+            A film adaptation, screenwritten by Cline and Zak Penn and directed by Steven Spielberg, was released on
+            March 29, 2018.</p>
+          <div class="card card-outline-secondary my-4">
+            <div class="card-header">
+              <strong>Customer Reviews</strong>
+            </div>
+            <div class="card-body">
+              <p>Great book 10/10!<p><small class='text-muted'>Posted by Bojan at 21:23 on 22/12/2018</small>
+                  <hr>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <footer class="bg-dark">
+    <div class="container text-center text-white" style="position:relative;">
+      Copyright &copy; Library 2018
+      <div style="position:absolute;right:0;top:0;margin-left:110px;text-align:right;">
+        Follow us on:
+        <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+        <a href="https://twitter.com/" class="fa fa-twitter"></a>
+        <a href="https://www.instagram.com/?hl=en" class="fa fa-instagram"></a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

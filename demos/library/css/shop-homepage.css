@@ -1,0 +1,240 @@
+html {
+    position: relative;
+    min-height: 100%;
+    margin: 0;
+}
+
+body {
+    padding-top: 54px;
+    margin-bottom: 60px;
+    background-image: url("../images/stone.jpg");
+    
+}
+
+@media (min-width: 992px) {
+    body {
+        padding-top: 56px;
+    }
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 35px;
+    padding-top: 7px;
+}
+
+.jumbotron {
+    background-image: url("../images/library.jpg"); 
+    background-size: cover;
+    color: black;
+}
+
+.textstroke {
+    color: white;
+    text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.text-warning {
+    font-size: 20pt;
+    color: #000000 !important;
+}
+
+.thumbnailpic {
+    height: 250px;
+    background-size: cover;
+}
+
+.thumbnail-card-title {
+    margin-top: 15px;
+    text-align: center;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.thumbnail-gallery-pic {
+    height: 250px;
+    width: 205px;
+}
+
+.bookpic {
+    float: left;
+    width: 205px;
+    height: 250px;
+    margin-right: 10px;
+    border-bottom-left-radius: calc(0.25rem - 1px);
+    border-bottom-right-radius: calc(0.25rem - 1px);
+}
+
+.author-name {
+    font-size: 15pt;
+    padding-top: -40px;
+}
+
+.book {
+    margin-top: -27px;
+    font-size: 25pt;
+}
+
+.card-text {
+    clear: both;
+}
+
+.buy-button {
+    float: right;
+}
+
+#review {
+    resize: none;
+}
+
+.card-rating {
+    margin-bottom: -10px;
+    font-size: 23pt;
+    color: #ffc107;
+}
+
+.card-author {
+    margin-top: -45px;
+}
+
+.pagination {
+    justify-content: center;
+}
+
+.category-active {
+    background-color: #51acf2;
+    color: white;
+}
+
+.header .dropdown-item {
+    background-color: #343a40;
+    color: #8c9093;
+}
+
+.header .dropdown-item:hover {
+    background-color: #343a40;
+    color: #ffffffaf;
+}
+
+.header .dropdown-menu {
+    background-color: #343a40;
+}
+/* 
+.card-btn .dropdown-item {
+    background-color: #343a40;
+    color: #8c9093;
+}
+
+.card-btn .dropdown-item:hover {
+    background-color: #343a40;
+    color: #ffffffaf;
+}
+
+.card-btn .dropdown-menu {
+    background-color: #343a40;
+} */
+.input-group {
+    width: auto;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.sort {
+    margin-left: 0px;
+    width: 50%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.gridview {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    
+}
+
+.list-book-text {
+    width: 380px;
+}
+
+.thumbnail-list-pic {
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: calc(0.25rem - 1px);
+    width: 205px;
+    height: 250px;
+    background: cover;
+}
+
+.list-img {
+    display: inline;
+}
+
+.shopping-cart {
+    font-size: 30pt;
+}
+
+.btn-cart {
+    border-left: 1px solid #1E90FF;
+}
+
+.dropdown-btn-cart {
+    background-color: #007bfe;
+}
+
+.dropdown-btn-cart .dropdown-item {
+    color: white;
+}
+
+.dropdown-btn-cart:hover  {
+    background-color: #0362cc;
+    transition: all .4s ease;
+    -webkit-transition: all .4s ease;
+}
+
+.dropdown-btn-cart .dropdown-item:active {
+    background-color: #0362cc;
+}
+
+.dropdown-btn-cart .dropdown-item:hover {
+    background-color: #0362cc;
+    transition: all .4s ease;
+    -webkit-transition: all .4s ease;
+}
+
+.dropdown-btn-cart .dropdown-item:focus {
+    background-color: #0362cc;
+}
+
+.cart-table {
+    table-layout: fixed;
+}
+
+.cart-table > tbody > tr:last-child:hover {
+    background-color: unset;
+}
+
+.delete-book {
+    font-size:25px !important;
+    color:red;
+    transition: all 0.25s ease;
+    transform: scale(1);
+}
+
+.delete-book:hover {
+    transform: scale(1.5) perspective(1px);
+}
+
+.header-icon {
+    margin-left: 15pt;
+    height: 25px;
+    width: 25px;
+}
+
+.header-library {
+    margin-left: 5pt !important;
+}

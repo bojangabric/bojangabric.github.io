@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/shop-homepage.css" rel="stylesheet">
+  <link href="css/font-awesome/css/font-awesome.css" rel="stylesheet">
+
+  <title>Home - Library</title>
+  <link rel="shortcut icon" href="/images/favicon.png">
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <img src="images/favicon.png" class="header-icon">
+      <a class="navbar-brand ml-5 header-library" href="index.html">Library</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li>
+            <form class="my-2 my-lg-0 mr-lg-2" method="GET">
+              <div class="input-group">
+                <input class="form-control" type="text" name="keyword" placeholder="Search for a book...">
+                <span class="input-group-append">
+                  <button class="btn btn-primary" type="button">
+                    <i class="fa fa-search"></i>
+                  </button>
+                </span>
+              </div>
+            </form>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="store.html">Shop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="login.html">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="register.html">Register</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <header class="jumbotron my-4 textstroke">
+      <h1 class="display-3">
+        <strong>
+          Welcome to the Library!
+        </strong>
+      </h1>
+      <p class="lead"><strong>Search for any book in the world</strong></p>
+      <a href="/store/categories/1" class="btn btn-primary btn-lg">Shop!</a>
+    </header>
+
+    <div class="row text-center">
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card h-100"><a href="/store/book/1"><img class="card-img-top thumbnailpic" src="images/ready_player_one.jpg"
+              alt="Ready Player One"></a>
+          <h4 class="card-title thumbnail-card-title">Ready Player One</h4>
+          <div class="card-body d-flex flex-column justify-content-end">
+            <p class="card-text card-author">Ernest Cline</p>
+          </div>
+          <div class="card-footer"><a href="/store/book/1" class="btn btn-primary">Find Out More!</a></div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card h-100"><a href="/store/book/2"><img class="card-img-top thumbnailpic" src="images/murder_on_the_orient_express.jpg"
+              alt="Murder on the Orient Express"></a>
+          <h4 class="card-title thumbnail-card-title">Murder on the Orient Express</h4>
+          <div class="card-body d-flex flex-column justify-content-end">
+            <p class="card-text card-author">Agatha Christie</p>
+          </div>
+          <div class="card-footer"><a href="/store/book/2" class="btn btn-primary">Find Out More!</a></div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card h-100"><a href="/store/book/3"><img class="card-img-top thumbnailpic" src="images/steve_jobs.jpg"
+              alt="Steve Jobs"></a>
+          <h4 class="card-title thumbnail-card-title">Steve Jobs</h4>
+          <div class="card-body d-flex flex-column justify-content-end">
+            <p class="card-text card-author">Walter Isaacson</p>
+          </div>
+          <div class="card-footer"><a href="/store/book/3" class="btn btn-primary">Find Out More!</a></div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card h-100"><a href="/store/book/4"><img class="card-img-top thumbnailpic" src="images/it.jpg" alt="Kurt Hilpert"></a>
+          <h4 class="card-title thumbnail-card-title">IT</h4>
+          <div class="card-body d-flex flex-column justify-content-end">
+            <p class="card-text card-author">Stephen King</p>
+          </div>
+          <div class="card-footer"><a href="/store/book/4" class="btn btn-primary">Find Out More!</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-dark">
+    <div class="container text-center text-white" style="position:relative;">
+      Copyright &copy; Library 2018
+      <div style="position:absolute;right:0;top:0;margin-left:110px;text-align:right;">
+        Follow us on:
+        <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+        <a href="https://twitter.com/" class="fa fa-twitter"></a>
+        <a href="https://www.instagram.com/?hl=en" class="fa fa-instagram"></a>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
