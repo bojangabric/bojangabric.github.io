@@ -270,7 +270,7 @@
 
 	linkItems.click(function (e) {
 		var href = $(this).attr("href"),
-			offsetTop = href === "#" ? 0 : $(href).offset().top - linkHeight + 1;
+			offsetTop = href === "#" ? 0 : $(href).offset().top;
 		$('html, body').stop().animate({
 			scrollTop: offsetTop
 		}, 800);
@@ -301,8 +301,8 @@
 	});
 
 
-	setInterval("slideSwitch('#slideshow1')", 5000);
-	setInterval("slideSwitch('#slideshow2')", 5000);
+	setInterval("slideSwitch('#slideshow1')", 3000);
+	setInterval("slideSwitch('#slideshow2')", 3000);
 
 })(jQuery);
 
