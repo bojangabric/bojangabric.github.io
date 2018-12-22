@@ -1462,6 +1462,7 @@ input, select, textarea {
 					font-size: 0.8rem;
 					outline: none;
 					padding: 0 2rem;
+					border-bottom: none;
 				}
 
 					#nav ul.links li a:hover {
@@ -1638,14 +1639,14 @@ input, select, textarea {
 				margin-left: 5%;
 			}
 
-			#main > .posts > article {
+			/* #main > .posts > article {
 				border-color: #eeeeee;
 				border-left-width: 2px;
 				border-style: solid;
 				border-top-width: 2px;
 				text-align: center;
 				border-left: none;
-			}
+			} */
 
 				#main > .posts > article > :last-child {
 					margin-bottom: 0;
@@ -2046,6 +2047,10 @@ input, select, textarea {
 						-webkit-flex-grow: 1;
 						-ms-flex-grow: 1;
 						flex-grow: 1;
+					}
+
+					#footer > section.split.contact > section > p > a {
+						border-bottom: none;
 					}
 
 					#footer > section.split.contact > section:first-child {
@@ -2456,3 +2461,45 @@ input, select, textarea {
 		}
 
 	}
+
+	.slideshow {
+		position:relative;
+		height: 350px;
+	}
+	
+	.slideshow img {
+		position:absolute;
+		top:0;
+		left:0;
+		z-index:8;
+		margin-top: 0 !important; 
+		margin-bottom: 0 !important;
+
+	}
+	
+	.slideshow img.active-pic {
+		z-index:10;
+	}
+	
+	.slideshow img.last-active {
+		z-index:9;
+	}
+
+	@media screen and (max-width: 980px) {
+		.slideshow {
+			height: 150px;
+		}
+	}
+
+	@media only screen and (max-width: 1024px) {
+		.slideshow {
+			height: 2111100px;
+		}
+	}
+
+	@media screen and (max-width: 1440px) {
+		.slideshow {
+			height: 260px;
+		}
+	}
+	
