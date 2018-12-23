@@ -39,8 +39,10 @@ var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 
 // Making the canvas full screen
-canvas.height = document.body.clientHeight + 73;
-canvas.width = document.body.clientWidth + 5;
+window.onload = function () {
+  canvas.height = document.body.clientHeight;
+  canvas.width = document.body.clientWidth;
+}
 
 var chinese = "田由甲申甴电甶男甸甹町画甼甽甾甿畀畁畂畃畄畅畆畇畈畉畊畋界畍畎畏畐畑";
 chinese = chinese.split("");
