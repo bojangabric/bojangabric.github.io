@@ -48,7 +48,7 @@ var chinese = "田由甲申甴电甶男甸甹町画甼甽甾甿畀畁畂畃畄�
 chinese = chinese.split("");
 
 var font_size = 10;
-var columns = canvas.width / font_size; // Number of columns for the rain
+var columns = canvas.width; // Number of columns for the rain
 
 // An array of drops - one per column
 var drops = [];
