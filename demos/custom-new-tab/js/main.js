@@ -10,41 +10,22 @@ function getTime() {
     (sec < 10 ? ("0" + sec) : sec);
 }
 
-window.onload = () => {
-  let xhr = new XMLHttpRequest();
-  // Request to open weather map for Belgrade, Serbia
-  xhr.open('GET', 'https://api.openweathermap.org/data/2.5/weather?id=792680&units=metric&appid=2167c4200e7e10943e498f3ad426df20');
-  xhr.onload = () => {
-    if (xhr.readyState === 4) {
-      if (xhr.status === 200) {
-        let json = JSON.parse(xhr.responseText);
-        console.log(json);
-        document.getElementById("temp").innerHTML = json.main.temp.toFixed(0) + " &#8451;";
-        document.getElementById("weather-description").innerHTML = json.weather[0].description;
-      } else {
-        console.log('error msg: ' + xhr.status);
-      }
-    }
-  }
-  xhr.send();
-  // Set up the clock
-  document.getElementById("clock").innerHTML = getTime();
-  // Set clock interval to tick clock
-  setInterval(() => {
-    document.getElementById("clock").innerHTML = getTime();
-  }, 100);
+function getWeather() {
+  return $.get("https://api.openweathermap.org/data/2.5/weather?id=792680&units=metric&appid=2167c4200e7e10943e498f3ad426df20", function (data) {
+    console.log(data);
+    $("#temp").html(data.main.temp.toFixed(0) + " &#8451;");
+    $("#weather-description").html(data.weather[0].description);
+    $("#clock").html(getTime());
+    setInterval(() => {
+      $("#clock").html(getTime());
+    }, 100);
+  });
 }
-
-var canvas = document.getElementById("canvas");
-var ctx = canvas.getContext("2d");
-
 // Making the canvas full screen
-window.onload = function () {
-  canvas.height = document.body.clientHeight;
-  canvas.width = document.body.clientWidth;
-}
+let canvas = document.getElementById("canvas");
+let ctx = canvas.getContext("2d");
 
-var chinese = "田由甲申甴电甶男甸甹町画甼甽甾甿畀畁畂畃畄畅畆畇畈畉畊畋界畍畎畏畐畑";
+let chinese = "田由甲申甴电甶男甸甹町画甼甽甾甿畀畁畂畃畄畅畆畇畈畉畊畋界畍畎畏畐畑";
 chinese = chinese.split("");
 
 var font_size = 10;
@@ -84,4 +65,14 @@ function draw() {
   }
 }
 
-setInterval(draw, 33);
+$(function () {
+  $.when(getWeather()).done(function (a1, a2, a3, a4) {
+    canvas.height = document.body.clientHeight;
+    canvas.width = document.body.clientWidth;
+    console.log(canvas.height);
+    console.log(canvas.width);
+
+    draw();
+    setInterval(draw, 33);
+  });
+});
