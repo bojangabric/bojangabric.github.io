@@ -66,6 +66,11 @@ function draw() {
 }
 
 $(function () {
+
+  $("#fold").on("click", function () {
+    window.location = "/";
+  });
+
   $.when(getWeather()).done(function (a1, a2, a3, a4) {
     canvas.height = document.body.clientHeight;
     canvas.width = document.body.clientWidth;
