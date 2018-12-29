@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Tables - Library</title>
+
+  <link rel="shortcut icon" href="/images/favicon.png">
+  <link href="css/sb-admin.css" rel="stylesheet">
+
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+  <script src="js/dataTables.buttons.min.js"></script>
+  <script src="https://cdn.datatables.net/select/1.2.6/js/dataTables.select.min.js"></script>
+  <script src="https://cdn.datatables.net/responsive/2.2.2/js/dataTables.responsive.min.js"></script>
+  <script src="js/main.js"></script>
+  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.5.2/css/buttons.bootstrap4.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/select/1.2.7/css/select.bootstrap4.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.bootstrap4.min.css">
+
+</head>
+
+<body class="fixed-nav sticky-footer bg-dark sidenav-toggled" id="page-top">
+  <!-- Navigation-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <div id="fold">
+      <img src="/images/fold_text.png">
+      <img id="curl" src="/images/fold.png">
+    </div>
+    <img src="images/favicon.png" class="header-icon ml-5">
+    <a class="navbar-brand ml-2" href="index.html">Library</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+      aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="" data-original-title="Dashboard">
+          <a class="nav-link" href="#">
+            <i class="fa fa-line-chart"></i>
+            <span class="nav-link-text">Dashboard</span>
+          </a>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="" data-original-title="Tables">
+          <a class="nav-link" href="#">
+            <i class="fa fa-fw fa-table"></i>
+            <span class="nav-link-text">Tables</span>
+          </a>
+        </li>
+      </ul>
+      <ul class="navbar-nav sidenav-toggler">
+        <li class="nav-item">
+          <a class="nav-link text-center" id="sidenavToggler">
+            <i class="fa fa-fw fa-angle-left"></i>
+          </a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <form class="form-inline my-2 my-lg-0 mr-lg-2">
+            <div class="input-group">
+              <input class="form-control" type="text" placeholder="Search for...">
+              <span class="input-group-append">
+                <button class="btn btn-primary" type="button">
+                  <i class="fa fa-search"></i>
+                </button>
+              </span>
+            </div>
+          </form>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">
+            Logout
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="content-wrapper">
+    <div class="container-fluid">
+      <!-- Breadcrumbs-->
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <a href="#">Dashboard</a>
+        </li>
+        <li class="breadcrumb-item active">Tables</li>
+      </ol>
+    </div>
+    <!-- /.container-fluid-->
+    <!-- /.content-wrapper-->
+
+
+    <div class="container-flex m-3">
+      <div class="row justify-content-center">
+        <div class="col-lg-12">
+          <div class="card">
+            <div class="card-header">
+              <i class="fa fa-table"></i>
+              <select id="table" name="table">
+                <option value="authors">authors</option>
+                <option selected="" value="books">books</option>
+                <option value="categories">categories</option>
+                <option value="migrations">migrations</option>
+                <option value="password_resets">password_resets</option>
+                <option value="reviews">reviews</option>
+                <option value="shopping_carts">shopping_carts</option>
+                <option value="users">users</option>
+              </select>
+            </div>
+
+            <div class="card-body table-responsive ">
+              <table id="main-table" class="display dataTable no-footer" role="grid" aria-describedby="main-table_info">
+                <thead>
+                  <tr role="row">
+                    <th class="text-center sorting_asc" tabindex="0" aria-controls="main-table" rowspan="1" colspan="1"
+                      aria-label="BookID: activate to sort column descending" aria-sort="ascending" style="width: 56px;">BookID</th>
+                    <th class="text-center sorting" tabindex="0" aria-controls="main-table" rowspan="1" colspan="1"
+                      aria-label="AuthorID: activate to sort column ascending" style="width: 70px;">AuthorID</th>
+                    <th class="text-center sorting" tabindex="0" aria-controls="main-table" rowspan="1" colspan="1"
+                      aria-label="Name: activate to sort column ascending" style="width: 104px;">Name</th>
+                    <th class="text-center sorting" tabindex="0" aria-controls="main-table" rowspan="1" colspan="1"
+                      aria-label="Price: activate to sort column ascending" style="width: 38px;">Price</th>
+                    <th class="text-center sorting" tabindex="0" aria-controls="main-table" rowspan="1" colspan="1"
+                      aria-label="Quantity: activate to sort column ascending" style="width: 66px;">Quantity</th>
+                    <th class="text-center sorting" tabindex="0" aria-controls="main-table" rowspan="1" colspan="1"
+                      aria-label="CategoryID: activate to sort column ascending" style="width: 86px;">CategoryID</th>
+                    <th class="text-center sorting" tabindex="0" aria-controls="main-table" rowspan="1" colspan="1"
+                      aria-label="StarRating: activate to sort column ascending" style="width: 80px;">StarRating</th>
+                    <th class="text-center sorting" tabindex="0" aria-controls="main-table" rowspan="1" colspan="1"
+                      aria-label="DateOfPublication: activate to sort column ascending" style="width: 139px;">DateOfPublication</th>
+                    <th class="text-center sorting" tabindex="0" aria-controls="main-table" rowspan="1" colspan="1"
+                      aria-label="Image: activate to sort column ascending" style="width: 104px;">Image</th>
+                    <th class="text-center sorting" tabindex="0" aria-controls="main-table" rowspan="1" colspan="1"
+                      aria-label="BookDescription: activate to sort column ascending" style="width: 126px;">BookDescription</th>
+                    <th class="text-center sorting" tabindex="0" aria-controls="main-table" rowspan="1" colspan="1"
+                      aria-label="created_at: activate to sort column ascending" style="width: 104px;">created_at</th>
+                    <th class="text-center sorting" tabindex="0" aria-controls="main-table" rowspan="1" colspan="1"
+                      aria-label="updated_at: activate to sort column ascending" style="width: 104px;">updated_at</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr role="row" class="odd">
+                    <td class="sorting_1">1</td>
+                    <td>4</td>
+                    <td>Ready Player One</td>
+                    <td>16.00</td>
+                    <td>10</td>
+                    <td>10</td>
+                    <td>4</td>
+                    <td>2012-12-12</td>
+                    <td>ready_player_one.jpg</td>
+                    <td>Et quos veniam facilis reprehenderit explicabo accusantium ut. Et vitae ad sint eum
+                      laboriosam quasi maiores. Aliquid quisquam dolorem asperiores soluta nihil dolor.</td>
+                    <td>2018-12-21 14:09:42</td>
+                    <td>2018-12-21 17:05:47</td>
+                  </tr>
+                  <tr role="row" class="even">
+                    <td class="sorting_1">2</td>
+                    <td>2</td>
+                    <td>Murder on the Orient Express</td>
+                    <td>13.00</td>
+                    <td>9</td>
+                    <td>11</td>
+                    <td>5</td>
+                    <td>2018-05-16</td>
+                    <td>murder_on_the_orient_express.jpg</td>
+                    <td>Quisquam magni et ab. Quis tempore culpa voluptatem aut. Sit minima rerum doloribus quia
+                      veritatis. Qui architecto qui magni.</td>
+                    <td>2018-12-21 14:09:42</td>
+                    <td>2018-12-21 14:09:42</td>
+                  </tr>
+                  <tr role="row" class="odd">
+                    <td class="sorting_1">3</td>
+                    <td>3</td>
+                    <td>Steve Jobs</td>
+                    <td>20.00</td>
+                    <td>8</td>
+                    <td>5</td>
+                    <td>3</td>
+                    <td>1975-12-26</td>
+                    <td>steve_jobs.jpg</td>
+                    <td>Ut sunt sapiente voluptas voluptas voluptatem voluptatem nisi aperiam. Quis perspiciatis
+                      dolorem placeat.</td>
+                    <td>2018-12-21 14:09:42</td>
+                    <td>2018-12-21 14:09:42</td>
+                  </tr>
+                  <tr role="row" class="even">
+                    <td class="sorting_1">4</td>
+                    <td>1</td>
+                    <td>Kurt Hilpert</td>
+                    <td>7.00</td>
+                    <td>7</td>
+                    <td>9</td>
+                    <td>2</td>
+                    <td>2002-09-01</td>
+                    <td>it.jpg</td>
+                    <td>Voluptas blanditiis asperiores quasi tempora aliquid. Sunt excepturi in dolores adipisci
+                      perspiciatis quis sit. Dolorum expedita et eaque excepturi. Laboriosam nihil possimus enim sint
+                      dicta.</td>
+                    <td>2018-12-21 14:09:42</td>
+                    <td>2018-12-21 14:09:42</td>
+                  </tr>
+                  <tr role="row" class="odd">
+                    <td class="sorting_1">5</td>
+                    <td>1</td>
+                    <td>Dr. Jalen Shields I</td>
+                    <td>3.00</td>
+                    <td>4</td>
+                    <td>3</td>
+                    <td>5</td>
+                    <td>1983-06-18</td>
+                    <td>the_hitchhikers_guide_to_the_galaxy.jpg</td>
+                    <td>Earum eligendi ratione ullam. Totam voluptatem asperiores temporibus facere est. Illum et
+                      quia omnis dignissimos velit nulla animi eos. Aut dolores accusamus dicta quae voluptatem vel
+                      culpa error.</td>
+                    <td>2018-12-21 14:09:42</td>
+                    <td>2018-12-21 14:09:42</td>
+                  </tr>
+                  <tr role="row" class="even">
+                    <td class="sorting_1">6</td>
+                    <td>5</td>
+                    <td>The Diary of a Young Girl</td>
+                    <td>9.00</td>
+                    <td>0</td>
+                    <td>5</td>
+                    <td>1</td>
+                    <td>1973-05-24</td>
+                    <td>the_diary_of_a_young_girl.jpg</td>
+                    <td>Blanditiis tempora architecto libero error consequatur explicabo molestias. Quas nostrum
+                      harum itaque est et occaecati. Delectus reprehenderit voluptas sunt aut.</td>
+                    <td>2018-12-21 14:09:42</td>
+                    <td>2018-12-21 14:09:42</td>
+                  </tr>
+                  <tr role="row" class="odd">
+                    <td class="sorting_1">7</td>
+                    <td>1</td>
+                    <td>Louie Bergstrom PhD</td>
+                    <td>1.00</td>
+                    <td>3</td>
+                    <td>8</td>
+                    <td>4</td>
+                    <td>1988-02-23</td>
+                    <td>murder_on_the_orient_express.jpg</td>
+                    <td>Exercitationem occaecati pariatur molestiae et pariatur nobis. Velit deleniti id maiores
+                      recusandae accusamus.</td>
+                    <td>2018-12-21 14:09:42</td>
+                    <td>2018-12-21 14:09:42</td>
+                  </tr>
+                  <tr role="row" class="even">
+                    <td class="sorting_1">8</td>
+                    <td>1</td>
+                    <td>Dr. Stephon Breitenberg Jr.</td>
+                    <td>3.00</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>2</td>
+                    <td>2000-04-04</td>
+                    <td>murder_on_the_orient_express.jpg</td>
+                    <td>Voluptatum magnam pariatur laudantium dolor fugit quam sint. Harum molestiae et deserunt esse
+                      et eligendi voluptatem. Distinctio fuga dolorem saepe officiis est.</td>
+                    <td>2018-12-21 14:09:42</td>
+                    <td>2018-12-21 14:09:42</td>
+                  </tr>
+                  <tr role="row" class="odd">
+                    <td class="sorting_1">11</td>
+                    <td>1</td>
+                    <td>Angelita Lemke</td>
+                    <td>2.00</td>
+                    <td>4</td>
+                    <td>8</td>
+                    <td>1</td>
+                    <td>1986-02-02</td>
+                    <td>the_diary_of_a_young_girl.jpg</td>
+                    <td>Esse voluptas error eligendi aut dolor dolorum. Sed distinctio cupiditate vitae sit quas et.
+                      Natus non a natus eius qui alias.</td>
+                    <td>2018-12-21 14:09:42</td>
+                    <td>2018-12-21 14:09:42</td>
+                  </tr>
+                  <tr role="row" class="even">
+                    <td class="sorting_1">12</td>
+                    <td>1</td>
+                    <td>Syble Schmeler I</td>
+                    <td>9.00</td>
+                    <td>6</td>
+                    <td>9</td>
+                    <td>4</td>
+                    <td>1975-04-13</td>
+                    <td>murder_on_the_orient_express.jpg</td>
+                    <td>Nihil veritatis libero repudiandae qui aliquam. Id odit ut temporibus perferendis esse in.
+                      Cumque possimus est recusandae dolores exercitationem.</td>
+                    <td>2018-12-21 14:09:42</td>
+                    <td>2018-12-21 14:09:42</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="sticky-footer bg-dark">
+    <div class="container">
+      <div class="text-center text-white">
+        <small>Copyright © Library 2018</small>
+      </div>
+    </div>
+  </footer>
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fa fa-angle-up"></i>
+  </a>
+
+  </div>
+  <!-- Bootstrap core JavaScript-->
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <!-- Core plugin JavaScript-->
+  <script src="js/jquery.easing.min.js"></script>
+  <!-- Custom scripts for all pages-->
+  <script src="js/sb-admin.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      var table = $('#main-table').DataTable({
+        select: 'single',
+        altEditor: true,
+        dom: 'Bfrtip',
+        buttons: [{
+          className: 'dt-button-add',
+          text: 'Add',
+          name: 'add',
+        },
+        {
+          className: 'dt-button-edit',
+          extend: 'selected',
+          text: 'Edit',
+          name: 'edit'
+        },
+        {
+          className: 'dt-button-delete',
+          extend: 'selected',
+          text: 'Delete',
+          name: 'delete'
+        }]
+      });
+
+      function str_pad(n) {
+        return String("0" + n).slice(-2);
+      }
+
+      function get_all_inputs(inputs) {
+        $("#altEditor-form :input").each(function () {
+          var name = $(this).attr('name');
+          var val = $(this).val();
+          inputs[name] = val;
+        });
+      }
+
+      function check_all_inputs(inputs) {
+        for (var e in inputs) {
+          if (inputs[e] == "") {
+            if ($(".info-label").hasClass('alert-success'))
+              $(".info-label").toggleClass('alert-success alert-danger');
+
+            $(".info-label").text("Fill all inputs!");
+            $(".info-label").show();
+            return false;
+          }
+        }
+        return true;
+      }
+
+      function info_label_response(response, message) {
+        if (response == 'success') {
+          if ($(".info-label").hasClass('alert-danger'))
+            $(".info-label").toggleClass('alert-danger alert-success');
+          $(".info-label").text(message);
+          $(".info-label").show();
+        } else {
+          if ($(".info-label").hasClass('alert-success'))
+            $(".info-label").toggleClass('alert-success alert-danger');
+          $(".info-label").text(response);
+          $(".info-label").show();
+        }
+      }
+
+      $('.dt-button-add').on('click', function (e) {
+        var d = new Date($.now());
+        $("#altEditor-form :input").each(function () {
+          if ($(this).attr('name') == 'created_at' || $(this).attr('name') == 'updated_at') {
+            $(this).val(d.getFullYear() + "-" + str_pad(d.getMonth() + 1) + "-" + str_pad(d.getDate()) + " " + str_pad(d.getHours()) + ":" + str_pad(d.getMinutes()) + ":" + str_pad(d.getSeconds()));
+            $(this).prop('readonly', true);
+          } else if ($(this).attr('name') == 'remember_token') {
+            $(this).val('null');
+            $(this).prop('readonly', true);
+          }
+        });
+      });
+
+      // Add row button
+      $('#altEditor-modal').on('click', '#addRowBtn', function (e) {
+        e.preventDefault();
+        var inputs = {};
+        get_all_inputs(inputs);
+        if (!check_all_inputs(inputs))
+          return false;
+
+        var inputs_array = new Array();
+        for (var items in inputs) {
+          inputs_array.push(inputs[items]);
+        }
+
+        info_label_response('success', "Successfully added!");
+        table.row.add(inputs_array).draw();
+      });
+
+      // Edit row button
+      $('#altEditor-modal').on('click', '#editRowBtn', function (e) {
+        e.preventDefault();
+        var inputs = {};
+        get_all_inputs(inputs);
+        if (!check_all_inputs(inputs))
+          return false;
+
+        var inputs_array = new Array();
+        for (var items in inputs) {
+          inputs_array.push(inputs[items]);
+        }
+        info_label_response('success', "Successfully edited!");
+        table.row({ selected: true }).data(inputs_array);
+      });
+
+      // Delete row btn
+      $('#altEditor-modal').on('click', '#deleteRowBtn', function (e) {
+        e.preventDefault();
+
+        info_label_response('success', "Successfully deleted!");
+      });
+    });
+  </script>
+  <script src="js/dataTables.altEditor.free.js"></script>
+
+  <div class="modal fade" id="altEditor-modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title"></h4> <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+              aria-hidden="true">×</span></button>
+        </div>
+        <div class="modal-body modal-bdy">
+          <p></p>
+        </div>
+        <div class="modal-footer"> <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <input type="submit" form="altEditor-form" class="btn btn-primary"> </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
