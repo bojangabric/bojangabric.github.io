@@ -1,0 +1,199 @@
+<html>
+
+<head>
+
+  <title>Sobe - Hoteli</title>
+  <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="/css/style.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="js/main.js"></script>
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <img class="ml-3" src="/images/favicon.png" width="25px" height="25px" />
+      <a class="navbar-brand ml-2" href="/">Hoteli</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="login.html">Uloguj se</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="register.html">Registracija</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 pt-4">
+        <form class="sobe-forma p-4">
+          <span class="label">Tip sobe</span>
+          <div class="options pb-2 mt-2">
+            <label class="custom-radio types">Standard soba
+              <input type="radio" name="tip_sobe" value="Standard soba">
+              <span class="checkmark"></span>
+            </label>
+            <label class="custom-radio types">Apartman
+              <input type="radio" name="tip_sobe" value="Apartman">
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <span class="label">Cena</span>
+          <div class="options mt-2 prices">
+            <label class="price_label">Min cena: <input class="mb-2 price_range" name="min_cena" type="number" step="50"
+                min="0" max="500" value="0"></label><br>
+            <label class="price_label">Max cena: <input class="mb-3 price_range" name="max_cena" type="number" step="50"
+                min="0" max="500" value="500"></label><br>
+          </div>
+          <button class="btn btn-primary mt-3" type="button">Pretrazi</button>
+        </form>
+      </div>
+
+      <div class="col-lg-9">
+        <div class="card mt-4 kol4">
+          <div class="row ">
+            <div class="col-lg-4">
+              <img src="/images/standard.jpg" class="promeni p-0">
+            </div>
+            <div class="col-lg-8 px-3 soba">
+              <div class="card-block px-3">
+                <h4 class="card-title mt-3">Standard soba, Hyatt</h4>
+                <p class="card-text mt-3">Opis</p>
+                <span class="prices"><strong>50$ ili 75 poena</strong></span>
+                <input hidden type="text" id="soba_id" value="1">
+                <div>
+                  Datum dolaska <input type="text" name="datum_dolaska" class="form-control datepick w-25 datum_dolaska"
+                    required>
+                </div>
+                <div>
+                  Datum odlaska <input type="text" name="datum_odlaska" class="form-control datepick w-25 mt-3 datum_odlaska"
+                    required>
+                  <button type="button" class="btn btn-primary btn-show-rooms mt-3 btn-rezervisi" data-toggle="modal"
+                    data-target="#rezervacija">
+                    Rezervisi
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card mt-4 kol4">
+          <div class="row ">
+            <div class="col-lg-4">
+              <img src="/images/apartman.jpg" class="promeni p-0">
+            </div>
+            <div class="col-lg-8 px-3 soba">
+              <div class="card-block px-3">
+                <h4 class="card-title mt-3">Apartman, Hyatt</h4>
+                <p class="card-text mt-3">Opis</p>
+                <span class="prices"><strong>150$ ili 175 poena</strong></span>
+                <input hidden type="text" id="soba_id" value="2">
+                <div>
+                  Datum dolaska <input type="text" name="datum_dolaska" class="form-control datepick w-25 datum_dolaska"
+                    required>
+                </div>
+                <div>
+                  Datum odlaska <input type="text" name="datum_odlaska" class="form-control datepick w-25 mt-3 datum_odlaska"
+                    required>
+                  <button type="button" class="btn btn-primary btn-show-rooms mt-3 btn-rezervisi" data-toggle="modal"
+                    data-target="#rezervacija">
+                    Rezervisi
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="rezervacija" tabindex="-1" role="dialog" aria-labelledby="rezervacijaLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="rezervacijaLabel">Placanje</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <form>
+              <div class="modal-body">
+                <div class="form-group">
+                  <label for="kartica">Izaberite karticu</label>
+                  <select class="form-control" id="kartica" name="kartica">
+                    <option>MasterCard</option>
+                    <option>Maestro</option>
+                    <option>Visa</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="broj_kartice">Broj kartice</label>
+                  <input type="text" class="form-control" id="broj_kartice" name="broj_kartice" placeholder="XXXX-XXXX-XXXX-XXXX">
+                </div>
+                <div class="row">
+                  <div class="form-group col-lg-8">
+                    <label for="datum_isteka">Datum isteka</label>
+                    <input type="text" class="form-control" id="datum_isteka" name="datum_isteka" placeholder="MM / YY">
+                  </div>
+                  <div class="form-group col-lg-4">
+                    <label for="cvv">CVV</label>
+                    <input type="text" class="form-control" id="cvv" name="cvv" placeholder="CVV">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label>Rezervacija za <b><span class="ime_sobe_i_hotela"></span></b></label>
+                </div>
+                <div class="form-group">
+                  Od: <input type="text" class="form-control datepick" id="datum_dolaska_modal" name="datum_dolaska_modal"
+                    readonly>
+                </div>
+                <div class="form-group">
+                  Do: <input type="text" class="form-control datepick" id="datum_odlaska_modal" name="datum_odlaska_modal"
+                    readonly>
+                </div>
+                <input hidden type="text" id="soba_id_modal" name="soba_id_modal">
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Vrati se</button>
+                <button type="button" name="plati" value="poeni" class="btn btn-success">Plati poenima</button>
+                <button type="button" name="plati" value="novac" class="btn btn-primary">Plati</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-dark">
+    <div class="container text-center text-white" style="position:relative;">
+      Copyright &copy; Hoteli 2018
+      <div class="socials">
+        Pratite nas na:
+        <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+        <a href="https://twitter.com/" class="fa fa-twitter"></a>
+        <a href="https://www.instagram.com/?hl=en" class="fa fa-instagram"></a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

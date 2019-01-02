@@ -1,0 +1,180 @@
+<html>
+
+<head>
+
+  <title>Hoteli</title>
+
+  <link rel="shortcut icon" href="/images/favicon.png" />
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet" />
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+  <link href="/css/style.css" rel="stylesheet" />
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <img class="ml-3" src="images/favicon.png" width="25px" height="25px" />
+      <a class="navbar-brand ml-2" href="/">Hoteli</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="login.html">Uloguj se</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="register.html">Registracija</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 pt-4">
+        <form class="hoteli-forma p-4">
+          <span class="label">Zvezdice</span>
+          <div class="options pb-2 mt-2">
+            <label class="custom-radio"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                class="fa fa-star"></i><i class="fa fa-star"></i>
+              <input type="radio" name="zvezdice" value="5">
+              <span class="checkmark"></span>
+            </label>
+            <label class="custom-radio"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                class="fa fa-star"></i>
+              <input type="radio" name="zvezdice" value="4">
+              <span class="checkmark"></span>
+            </label>
+            <label class="custom-radio"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
+              <input type="radio" name="zvezdice" value="3">
+              <span class="checkmark"></span>
+            </label>
+            <label class="custom-radio"><i class="fa fa-star"></i><i class="fa fa-star"></i>
+              <input type="radio" name="zvezdice" value="2">
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <span class="label">Lokacija</span>
+          <div class="options cities">
+            <label class="custom-radio">Beograd
+              <input type="radio" name="grad" value="Beograd">
+              <span class="checkmark"></span>
+            </label>
+            <label class="custom-radio">Novi Sad
+              <input type="radio" name="grad" value="Novi Sad">
+              <span class="checkmark"></span>
+            </label>
+            <label class="custom-radio">Nis
+              <input type="radio" name="grad" value="Nis">
+              <span class="checkmark"></span>
+            </label>
+          </div>
+
+          <button class="btn btn-primary mt-3" type="submit">Pretrazi</button>
+        </form>
+      </div>
+
+      <div class="col-lg-9">
+        <div class="card mt-4 kol4">
+          <div class="row ">
+            <div class="col-lg-4 pr-0">
+              <img src="/images/hyatt.jpg" class="promeni p-0">
+            </div>
+            <div class="col-lg-8 px-3 hotel">
+              <div class="card-block px-3">
+                <h4 class="card-title mt-3">Hyatt</h4>
+                <h6>Milentija Popovica 5, Beograd</h6>
+                <p class="card-text mt-3">Hotel sa 5 zvezdica.</p>
+                <p class="rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </p>
+                <form action="room.html">
+                  <span class="prices"><strong>50$ - 150$</strong></span>
+                  <button type="submit" class="btn btn-primary btn-show-rooms">Prikazi sobe</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card mt-4 kol4">
+          <div class="row ">
+            <div class="col-lg-4 pr-0">
+              <img src="/images/putnik.jpg" class="promeni p-0">
+            </div>
+            <div class="col-lg-8 px-3 hotel">
+              <div class="card-block px-3">
+                <h4 class="card-title mt-3">Putnik</h4>
+                <h6>Ilije Ognjanovica 24, Novi Sad</h6>
+                <p class="card-text mt-3">Hotel sa 3 zvezdice.</p>
+                <p class="rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </p>
+                <form>
+                  <span class="prices"><strong>No rooms available</strong></span>
+                  <button type="submit" disabled class="btn btn-primary btn-show-rooms disabled">Prikazi sobe</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card mt-4 kol4">
+          <div class="row ">
+            <div class="col-lg-4 pr-0">
+              <img src="/images/new_city.jpg" class="promeni p-0">
+            </div>
+            <div class="col-lg-8 px-3 hotel">
+              <div class="card-block px-3">
+                <h4 class="card-title mt-3">New City</h4>
+                <h6>Vozda Karadjordja 12, Nis</h6>
+                <p class="card-text mt-3">Hotel sa 4 zvezdice.</p>
+                <p class="rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </p>
+                <form>
+                  <span class="prices"><strong>No rooms available</strong></span>
+                  <button type="submit" disabled class="btn btn-primary btn-show-rooms disabled">Prikazi sobe</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-dark">
+    <div class="container text-center text-white" style="position:relative;">
+      Copyright &copy; Hoteli 2018
+      <div class="socials">
+        Pratite nas na:
+        <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+        <a href="https://twitter.com/" class="fa fa-twitter"></a>
+        <a href="https://www.instagram.com/?hl=en" class="fa fa-instagram"></a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
