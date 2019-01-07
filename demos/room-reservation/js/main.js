@@ -1,4 +1,6 @@
 $(function () {
+  $.datepicker.setDefaults({ beforeShow: function (i) { if ($(i).attr('readonly')) { return false; } } });
+
   $(".datepick").datepicker({
     dateFormat: "dd-mm-yy",
     changeMonth: true,

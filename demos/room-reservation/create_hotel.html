@@ -1,0 +1,147 @@
+<html>
+
+<head>
+
+  <title>Kreiranje hotela - Hoteli</title>
+
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="  css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <div id="fold">
+    <img src="/images/fold_text.png">
+    <img id="curl" src="/images/fold.png">
+  </div>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <img class="ml-3" src="images/favicon.png" width="25px" height="25px" />
+      <a class="navbar-brand ml-2" href="/">Hoteli</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Klijenti</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Hoteli</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Sobe</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Tipovi soba</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Izloguj se</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8 pt-4">
+        <div class="card">
+          <div class="card-header">Kreiraj hotela</div>
+          <div class="card-body">
+            <form>
+
+              <div class="form-group row">
+                <label for="naziv" class="col-sm-4 col-form-label text-md-right">Naziv</label>
+                <div class="col-md-6">
+                  <input id="naziv" type="text" class="form-control" name="naziv" required autofocus>
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label for="adresa" class="col-sm-4 col-form-label text-md-right">Adresa</label>
+                <div class="col-md-6">
+                  <input id="adresa" type="text" class="form-control" name="adresa" required autofocus>
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label for="grad" class="col-sm-4 col-form-label text-md-right">Grad</label>
+                <div class="col-md-6">
+                  <input id="grad" type="text" class="form-control" name="grad" required autofocus>
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label for="drzava" class="col-sm-4 col-form-label text-md-right">Drzava</label>
+                <div class="col-md-6">
+                  <input id="drzava" type="text" class="form-control" name="drzava" required autofocus>
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label for="opis" class="col-sm-4 col-form-label text-md-right">Opis</label>
+                <div class="col-md-6">
+                  <input id="opis" type="text" class="form-control" name="opis" required autofocus>
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label for="zvezdice" class="col-sm-4 col-form-label text-md-right">Zvezdice</label>
+                <div class="col-md-6">
+                  <input id="zvezdice" type="number" class="form-control" name="zvezdice" required autofocus value="5"
+                    min="1" max="5">
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label for="slika" class="col-sm-4 col-form-label text-md-right">Slika</label>
+                <div class="col-md-6">
+                  <input id="slika" type="text" class="form-control" name="slika" required autofocus>
+                </div>
+              </div>
+
+              <div class="form-group row mb-0">
+                <div class="col-md-8 offset-md-4">
+                  <button type="button" name="btn" value="save" class="btn btn-primary">
+                    Sacuvaj
+                  </button>
+                  <a href="admin.html">
+                    <button type="button" name="btn" value="cancel" class="btn btn-danger">
+                      Prekini
+                    </button>
+                  </a>
+                </div>
+              </div>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="bg-dark">
+    <div class="container text-center text-white" style="position:relative;">
+      Copyright &copy; Hoteli 2019
+      <div class="socials">
+        Pratite nas na:
+        <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+        <a href="https://twitter.com/" class="fa fa-twitter"></a>
+        <a href="https://www.instagram.com/?hl=en" class="fa fa-instagram"></a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

@@ -196,3 +196,37 @@ footer {
 .table {
     background-image: url('../images/stone.jpg');
 }
+
+#curl {
+    width:40px;
+    height:40px;
+    position:fixed;
+    top:0;
+    left:0;
+    transition: ease 1s;
+}
+
+#curl:hover {
+    width:150px;
+    height:150px;
+    transition: ease 1s;
+}
+
+#fold {
+    border: none;
+    overflow:hidden;
+    width:35px;
+    height:35px;
+    position:fixed;
+    top:0;
+    left:0;
+    transition: ease 1s;
+    z-index: 10;
+}
+
+#fold:hover {
+    width:125px;
+    height:130px;
+    transition: ease 1s;
+    cursor: pointer;
+}
