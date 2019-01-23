@@ -1,4 +1,23 @@
 $(function () {
+
+  new Cleave('#broj_kartice', {
+    creditCard: true
+  });
+
+  new Cleave('#datum_isteka', {
+    date: true,
+    datePattern: ['m', 'y']
+  });
+
+  new Cleave('#cvv', {
+    numeral: true,
+    blocks: [3]
+  });
+
+  $("button[value=poeni]").on("click", function () {
+    $('[required]').removeAttr('required');
+  });
+
   $.datepicker.setDefaults({ beforeShow: function (i) { if ($(i).attr('readonly')) { return false; } } });
 
   $(".datepick").datepicker({
