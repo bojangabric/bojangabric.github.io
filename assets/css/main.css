@@ -1565,7 +1565,7 @@ input, select, textarea {
 
 			}
 
-			@media screen and (max-width: 1050px) and (orientation: landscape) {
+			@media screen and (min-width: 600px	) and (max-width: 1440px)  {
 				.post.featured.skills > div {
 					width: 40%;
 				}
