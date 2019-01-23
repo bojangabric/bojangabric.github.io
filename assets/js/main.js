@@ -299,27 +299,4 @@
 				.end().filter("[href='#" + id + "']").parent().addClass("active");
 		}
 	});
-
-
-	setInterval("slideSwitch('#slideshow1')", 3000);
-	setInterval("slideSwitch('#slideshow2')", 3000);
-
 })(jQuery);
-
-// Change slideshow pictures every 5 seconds
-function slideSwitch(id) {
-	var $active = $(id + ' img.active-pic');
-
-	if ($active.length == 0) $active = $(id + ' img:last');
-
-	var $next = $active.next().length ? $active.next()
-		: $(id + ' img:first');
-
-	$active.addClass('last-active');
-
-	$next.css({ opacity: 0.0 })
-		.addClass('active-pic')
-		.animate({ opacity: 1.0 }, 1000, function () {
-			$active.removeClass('active-pic last-active');
-		});
-}
