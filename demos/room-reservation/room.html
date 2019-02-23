@@ -1,6 +1,14 @@
 <html>
 
 <head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134774339-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-134774339-1');
+  </script>
 
   <title>Sobe - Hoteli</title>
   <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
@@ -28,8 +36,8 @@
     <div class="container">
       <img class="ml-3" src="images/favicon.png" width="25px" height="25px" />
       <a class="navbar-brand ml-2" href="index.html">Hoteli</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
-        aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -91,8 +99,8 @@
                     required>
                 </div>
                 <div>
-                  Datum odlaska <input type="text" name="datum_odlaska" class="form-control datepick w-25 mt-3 datum_odlaska"
-                    required>
+                  Datum odlaska <input type="text" name="datum_odlaska"
+                    class="form-control datepick w-25 mt-3 datum_odlaska" required>
                   <button type="button" class="btn btn-primary btn-show-rooms mt-3 btn-rezervisi" data-toggle="modal"
                     data-target="#rezervacija">
                     Rezervisi
@@ -119,8 +127,8 @@
                     required>
                 </div>
                 <div>
-                  Datum odlaska <input type="text" name="datum_odlaska" class="form-control datepick w-25 mt-3 datum_odlaska"
-                    required>
+                  Datum odlaska <input type="text" name="datum_odlaska"
+                    class="form-control datepick w-25 mt-3 datum_odlaska" required>
                   <button type="button" class="btn btn-primary btn-show-rooms mt-3 btn-rezervisi" data-toggle="modal"
                     data-target="#rezervacija">
                     Rezervisi
@@ -155,7 +163,8 @@
                 </div>
                 <div class="form-group">
                   <label for="broj_kartice">Broj kartice</label>
-                  <input type="text" class="form-control" id="broj_kartice" name="broj_kartice" placeholder="XXXX-XXXX-XXXX-XXXX">
+                  <input type="text" class="form-control" id="broj_kartice" name="broj_kartice"
+                    placeholder="XXXX-XXXX-XXXX-XXXX">
                 </div>
                 <div class="row">
                   <div class="form-group col-lg-8">
@@ -171,12 +180,12 @@
                   <label>Rezervacija za <b><span class="ime_sobe_i_hotela"></span></b></label>
                 </div>
                 <div class="form-group">
-                  Od: <input type="text" class="form-control datepick" id="datum_dolaska_modal" name="datum_dolaska_modal"
-                    readonly>
+                  Od: <input type="text" class="form-control datepick" id="datum_dolaska_modal"
+                    name="datum_dolaska_modal" readonly>
                 </div>
                 <div class="form-group">
-                  Do: <input type="text" class="form-control datepick" id="datum_odlaska_modal" name="datum_odlaska_modal"
-                    readonly>
+                  Do: <input type="text" class="form-control datepick" id="datum_odlaska_modal"
+                    name="datum_odlaska_modal" readonly>
                 </div>
                 <input hidden type="text" id="soba_id_modal" name="soba_id_modal">
               </div>
