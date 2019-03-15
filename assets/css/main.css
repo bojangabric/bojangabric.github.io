@@ -2091,41 +2091,29 @@ input, select, textarea {
 
 		@media screen and (max-width: 980px) {
 
-			#footer {
-				display: block;
+			#footer > section.split > section {
+				padding: 4rem 4rem 2rem 4rem ;
 			}
 
-				#footer > section {
-					border-top: solid 2px #e2e2e2;
+				#footer > section.split > section:first-child {
+					padding: 4rem 4rem 2rem 4rem ;
 				}
 
-					#footer > section:first-child {
-						border-top: 0;
-					}
+				#footer > section.split > section:last-child {
+					padding: 4rem 4rem 2rem 4rem ;
+				}
 
-					#footer > section.split > section {
-						padding: 4rem 4rem 2rem 4rem ;
-					}
+			#footer > section.split.contact > section {
+				padding: 4rem;
+			}
 
-						#footer > section.split > section:first-child {
-							padding: 4rem 4rem 2rem 4rem ;
-						}
+				#footer > section.split.contact > section:first-child {
+					padding: 4rem;
+				}
 
-						#footer > section.split > section:last-child {
-							padding: 4rem 4rem 2rem 4rem ;
-						}
-
-					#footer > section.split.contact > section {
-						padding: 4rem;
-					}
-
-						#footer > section.split.contact > section:first-child {
-							padding: 4rem;
-						}
-
-						#footer > section.split.contact > section:last-child {
-							padding: 4rem;
-						}
+				#footer > section.split.contact > section:last-child {
+					padding: 4rem;
+				}
 
 				#footer form label,
 				#footer h3,
@@ -2136,6 +2124,15 @@ input, select, textarea {
 		}
 
 		@media screen and (max-width: 736px) {
+
+			#footer > section:nth-child(2) {
+				border-top: solid 2px #e2e2e2;
+				border-left: none;
+			}
+
+			#footer {
+				display: block;
+			}
 
 			#footer > section {
 				padding: 2rem 2rem 0.1rem 2rem ;
