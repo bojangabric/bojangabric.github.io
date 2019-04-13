@@ -1,7 +1,7 @@
 (function ($) {
 
 	$(".project-pic").lazy();
-	
+
 	var $window = $(window),
 		$body = $('body'),
 		$wrapper = $('#wrapper'),
@@ -267,13 +267,18 @@
 		var href = $(this).attr("href"),
 			offsetTop = href === "#" ? 0 : $(href).offset().top;
 		$('html, body').stop().animate({
-			scrollTop: offsetTop
+			scrollTop: offsetTop - 40
 		}, 800);
 		e.preventDefault();
 	});
 
 	// Bind to scroll
 	$(window).scroll(function () {
+		if ($(document).scrollTop() > window.innerHeight - 71) {
+			$('nav').addClass('shrink');
+		} else {
+			$('nav').removeClass('shrink');
+		}
 		// Get container scroll position
 		var fromTop = $(this).scrollTop() + linkHeight;
 

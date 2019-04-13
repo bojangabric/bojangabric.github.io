@@ -972,16 +972,15 @@ input, select, textarea {
 		transition: opacity 0.5s ease;
 		position: relative;
 		z-index: 1;
-		overflow: hidden;
 	}
 
 		#wrapper > .bg {
 			position: absolute;
 			top: 0;
 			left: 0;
+			height: 1270.5px;
 			width: 100%;
-			height: 100%;
-			background-color: #212931;
+			background-color: #fff;
 			background-image: url("../../images/overlay.png"), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../../images/background.jpg");
 			background-size: auto,								auto,														100% cover;
 			background-position: center,								center,														top center;
@@ -1366,18 +1365,24 @@ input, select, textarea {
 		-moz-transition: -moz-transform 1s ease, opacity 1s ease;
 		-webkit-transition: -webkit-transform 1s ease, opacity 1s ease;
 		-ms-transition: -ms-transform 1s ease, opacity 1s ease;
-		transition: transform 1s ease, opacity 1s ease;
+		transition: transform 1s ease, opacity 1s ease, height 0.3s ease, line-height 0.3s ease;
 		background: rgba(255, 255, 255, 0.175);
 		height: 4rem;
 		line-height: 4rem;
-		margin: -4rem auto 0 auto;
 		overflow: hidden;
+		margin: -4rem auto 0 auto;
 		padding: 0 2rem 0 0;
-		position: relative;
+		position: sticky;
 		width: calc(100% - 4rem);
 		max-width: 72rem;
-		z-index: 2;
+		z-index: 3;
+		top: 0;
 	}
+		#nav.shrink {
+			height: 2rem;
+			line-height: 2rem;
+			background: #50628b;
+		}
 
 		#nav ul.divided li {
 			border-top-color: #ffffff;
