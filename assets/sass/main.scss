@@ -8,12 +8,6 @@
 @import 'font-awesome.min.css';
 @import url('https://fonts.googleapis.com/css?family=Merriweather:300,700,300italic,700italic|Source+Sans+Pro:900');
 
-/*
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
-
 // Breakpoints.
 
 	@include breakpoints((
@@ -32,7 +26,6 @@
 		@include color-typography($p);
 		@include color-box($p);
 		@include color-button($p);
-		@include color-form($p);
 		@include color-list($p);
 		@include color-section($p);
 		@include color-table($p);
@@ -50,7 +43,6 @@
 	@import 'components/row';
 	@import 'components/box';
 	@import 'components/button';
-	@import 'components/form';
 	@import 'components/icon';
 	@import 'components/image';
 	@import 'components/actions';
