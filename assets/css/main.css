@@ -975,10 +975,10 @@ input, select, textarea {
 	}
 
 		#wrapper > .bg {
-			position: absolute;
+			position: fixed;
 			top: 0;
 			left: 0;
-			height: 1270.5px;
+			height: 100%;
 			width: 100%;
 			background-color: #fff;
 			background-image: url("../../images/overlay.png"), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../../images/background.jpg");
